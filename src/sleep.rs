@@ -107,7 +107,6 @@ impl Future for Sleep {
                 .set_timeout_with_callback_and_timeout_and_arguments_0(&timeout_cb, duration_ms)
                 .unwrap();
 
-            //let scheduled_timeout = schedule_timeout(duration_ms);
             this.inner = Some(SleepInner {
                 future: JsFuture::from(promise),
                 timeout_id,

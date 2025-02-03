@@ -99,7 +99,7 @@ impl SystemTime {
     pub const UNIX_EPOCH: SystemTime = UNIX_EPOCH;
 
     pub fn now() -> SystemTime {
-        let us = (js_sys::Date::now() * 1000000f64) as u64;
+        let us = (js_sys::Date::now() * 1000f64) as u64;
         SystemTime(us)
     }
 

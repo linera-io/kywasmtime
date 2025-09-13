@@ -1,3 +1,4 @@
+pub mod error;
 mod interval;
 mod js;
 mod sleep;

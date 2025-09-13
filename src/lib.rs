@@ -7,7 +7,7 @@ mod timeout;
 
 /// ```
 /// use std::time::Duration;
-/// use kywasmtime::*;
+/// use linera_kywasmtime::*;
 ///
 /// async fn demo_sleep() {
 ///     let duration = Duration::from_millis(500);

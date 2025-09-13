@@ -1,3 +1,5 @@
+**!! This is a temporary fork to be used only in the Linera protocol !!**
+
 Implementation of the [`tokio::time` API][tokio-time], but for WASM.
 
 [tokio-time]: https://docs.rs/tokio/latest/tokio/time/index.html
@@ -11,7 +13,7 @@ declarations:
 #[cfg(not(target_family="wasm"))]
 use tokio::time::*;
 #[cfg(target_family="wasm")]
-use kywasmtime::*;
+use linera_kywasmtime::*;
 ```
 
 
@@ -21,7 +23,7 @@ use kywasmtime::*;
 
 ```rust
 use std::time::Duration;
-use kywasmtime::*;
+use linera_kywasmtime::*;
 
 async fn demo_sleep() {
     let duration = Duration::from_millis(500);

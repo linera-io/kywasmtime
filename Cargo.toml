@@ -1,14 +1,11 @@
 [package]
-name = "kywasmtime"
+name = "linera-kywasmtime"
 version = "0.1.0"
 edition = "2021"
-description = "Time utils for WASM"
-authors = ["Romain Vimont <rom@rom1v.com>"]
+description = "Time utils for WASM (Linera fork)"
+authors = ["Romain Vimont <rom@rom1v.com>", "Linera <contact@linera.io>"]
 license = "MIT"
-repository = "https://github.com/rom1v/kywasmtime"
-keywords = ["timer", "wasm", "browser", "sleep", "interval", "timeout"]
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+repository = "https://github.com/linera-io/kywasmtime"
 
 [dependencies]
 js-sys = "0.3"

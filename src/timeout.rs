@@ -1,3 +1,4 @@
+use crate::error::Elapsed;
 use crate::sleep::{sleep, sleep_until, Sleep};
 use crate::time::Instant;
 use std::future::{Future, IntoFuture};
@@ -38,8 +39,6 @@ impl<T: Future> Future for Timeout<T> {
         }
     }
 }
-
-pub struct Elapsed; // Error returned by Timeout
 
 pub fn timeout_at<F>(deadline: Instant, future: F) -> Timeout<F::IntoFuture>
 where

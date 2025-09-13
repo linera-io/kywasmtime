@@ -7,6 +7,8 @@ use wasm_bindgen::JsCast;
 pub struct Instant(u64);
 
 impl Instant {
+    pub const MAX: Self = Self(u64::MAX);
+
     pub fn now() -> Self {
         let global = js_sys::global();
         let global_scope = global.unchecked_ref::<js::GlobalScope>();
@@ -57,7 +59,7 @@ impl Add<Duration> for Instant {
 
     fn add(self, other: Duration) -> Self::Output {
         self.checked_add(other)
-            .expect("overflow when adding duration to instant")
+            .unwrap_or(Self::MAX)
     }
 }
 
